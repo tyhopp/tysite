@@ -1,0 +1,15 @@
+{
+  "name": "tysite-prpl",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "prpl-build && prpl-serve",
+    "build": "prpl-build"
+  },
+  "author": "Ty Hopp",
+  "license": "MIT",
+  "dependencies": {
+    "prpl": "0.0.9"
+  }
+}

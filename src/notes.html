@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notes | Ty Hopp</title>
+    <meta name="title" content="Notes | Ty Hopp" />
+    <meta
+      name="description"
+      content="Notes by Ty Hopp, Beijing-based software engineer."
+    />
+    <meta
+      name="keywords"
+      content="software engineer, full stack engineer, software developer"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Notes | Ty Hopp" />
+    <meta
+      property="og:description"
+      content="Notes by Ty Hopp, Beijing-based software engineer."
+    />
+    <meta property="og:url" content="https://tyhopp.com/notes" />
+    <meta
+      property="og:image"
+      content="https://tyhopp.com/assets/meta/open-graph-card.png"
+    />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1200" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@doestyhopp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      copy
+      href="assets/meta/favicon-180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      copy
+      href="assets/meta/favicon-180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      copy
+      href="assets/meta/favicon-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      copy
+      href="assets/meta/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      copy
+      href="assets/meta/favicon-16.png"
+    />
+    <link rel="icon" href="assets/meta/favicon.ico" />
+    <link rel="preload" as="style" href="styles/main.css" />
+    <link href="styles/main.css" rel="stylesheet" />
+    <link rel="preload" as="style" href="notes.css" />
+    <link href="notes.css" rel="stylesheet" />
+    <link rel="preload" as="style" href="components/ty-header/ty-header.css" />
+    <link href="components/ty-header/ty-header.css" rel="stylesheet" />
+    <link rel="preload" as="style" href="components/ty-tags/ty-tags.css" />
+    <link href="components/ty-tags/ty-tags.css" rel="stylesheet" />
+    <script defer src="components/ty-header/ty-header.js"></script>
+    <script defer src="components/ty-tags/ty-tags.js"></script>
+  </head>
+  <body>
+    <ty-header></ty-header>
+    <main class="notes">
+      <h1 class="notes-title">Notes</h1>
+      <ul>
+        <prpl type="list" src="content/notes">
+          <li class="notes-item">
+            <a class="notes-item-title-anchor" href="[slug]">
+              <h3 class="notes-item-title">[title]</h3>
+            </a>
+            <ty-tags categories="[categories]"></ty-tags>
+          </li>
+        </prpl>
+      </ul>
+    </main>
+  </body>
+</html>

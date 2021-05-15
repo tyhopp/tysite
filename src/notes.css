@@ -1,0 +1,35 @@
+.notes {
+  display: block;
+  margin: 4em auto;
+  padding: 0 1em;
+  max-width: 440px;
+}
+
+@media (max-width: 350px) {
+  .notes {
+    padding: 0 0.5em;
+  }
+}
+
+.notes-title {
+  text-align: center;
+  margin: 0;
+}
+
+.notes-item {
+  margin: 1.5em 0;
+  list-style: none;
+}
+
+.notes-item-title-anchor {
+  display: inline-block;
+  border-bottom: none;
+  margin-bottom: 1em;
+}
+
+.notes-item-title {
+  display: inline;
+  margin: 0;
+  padding-bottom: 0.1em;
+  border-bottom: 1px dotted mediumvioletred;
+}
