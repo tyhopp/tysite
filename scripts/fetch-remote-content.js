@@ -11,12 +11,14 @@ const {
   TYSITE_AWS_ACCESS_KEY,
   TYSITE_AWS_SECRET_ACCESS_KEY,
   TYSITE_AWS_CONTENT_BUCKET,
+  TYSITE_AWS_CONTENT_BUCKET_REGION,
 } = process.env;
 
 // Configure S3
 AWS.config.update({
   accessKeyId: TYSITE_AWS_ACCESS_KEY,
   secretAccessKey: TYSITE_AWS_SECRET_ACCESS_KEY,
+  region: TYSITE_AWS_CONTENT_BUCKET_REGION,
 });
 
 const s3 = new AWS.S3();
@@ -42,7 +44,10 @@ s3.listObjectsV2({ Bucket: TYSITE_AWS_CONTENT_BUCKET }, (error, data) => {
         return;
       }
       const fileContent = file.Body.toString();
-      fs.writeFileSync(path.resolve(`content/notes/${Key}`), fileContent);
+      fs.writeFileSync(
+        path.resolve(`content/notes/${Key}.md`),
+        JSON.parse(fileContent)
+      );
     });
   });
 });
