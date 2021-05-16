@@ -3,10 +3,10 @@
 const AWS = require('aws-sdk');
 
 const {
-  AWS_ACCESS_KEY,
-  AWS_SECRET_ACCESS_KEY,
-  AWS_CONTENT_BUCKET,
-  UPLOAD_TO_S3,
+  TYSITE_AWS_ACCESS_KEY,
+  TYSITE_AWS_SECRET_ACCESS_KEY,
+  TYSITE_AWS_CONTENT_BUCKET,
+  TYSITE_UPLOAD_TO_S3,
 } = process.env;
 
 /**
@@ -16,7 +16,7 @@ exports.handler = async (event) => {
   // Ensure credentials are passed
   if (
     !event.headers['x-upload-to-s3'] ||
-    event.headers['x-upload-to-s3'] !== UPLOAD_TO_S3
+    event.headers['x-upload-to-s3'] !== TYSITE_UPLOAD_TO_S3
   ) {
     return {
       statusCode: 401,
@@ -30,8 +30,8 @@ exports.handler = async (event) => {
     case 'PUT':
       // Configure S3
       AWS.config.update({
-        accessKeyId: AWS_ACCESS_KEY,
-        secretAccessKey: AWS_SECRET_ACCESS_KEY,
+        accessKeyId: TYSITE_AWS_ACCESS_KEY,
+        secretAccessKey: TYSITE_AWS_SECRET_ACCESS_KEY,
       });
 
       const s3 = new AWS.S3();
@@ -39,7 +39,7 @@ exports.handler = async (event) => {
       const slug = exec(/slug:.*\/(.*?)\n/, event.body)[1];
 
       s3.putObject(
-        { Bucket: AWS_CONTENT_BUCKET, Key: slug, Body: event.body },
+        { Bucket: TYSITE_AWS_CONTENT_BUCKET, Key: slug, Body: event.body },
         (error) => {
           if (error) {
             return {
