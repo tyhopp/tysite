@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const AWS = require('aws-sdk');
+const fetch = require('node-fetch');
 
 const {
   TYSITE_AWS_ACCESS_KEY,
@@ -8,6 +9,7 @@ const {
   TYSITE_AWS_CONTENT_BUCKET,
   TYSITE_AWS_CONTENT_BUCKET_REGION,
   TYSITE_UPLOAD_TO_S3,
+  TYSITE_CONTENT_PUBLISH_HOOK,
 } = process.env;
 
 /**
@@ -36,15 +38,18 @@ exports.handler = async (event) => {
           region: TYSITE_AWS_CONTENT_BUCKET_REGION,
         });
 
-        const s3 = new AWS.S3();
-        const title = /title:.*?\s(.*?)\\n/.exec(event.body)[1];
-        const slug = /slug:.*?\s(.*?)\\n/.exec(event.body)[1];
+        const parsedEventBody = JSON.parse(event.body);
 
+        const s3 = new AWS.S3();
+        const title = /title:\s(.*?)\n/.exec(parsedEventBody)[1];
+        const slug = /slug:\s(.*?)\n/.exec(parsedEventBody)[1];
+
+        // Upload to S3
         const response = await s3
           .putObject({
             Bucket: TYSITE_AWS_CONTENT_BUCKET,
             Key: slug,
-            Body: event.body,
+            Body: parsedEventBody,
           })
           .promise();
 
@@ -54,6 +59,9 @@ exports.handler = async (event) => {
             body: 'Internal Server Error',
           };
         }
+
+        // Trigger site rebuild
+        await fetch(TYSITE_CONTENT_PUBLISH_HOOK, { method: 'POST' });
 
         return {
           statusCode: 200,

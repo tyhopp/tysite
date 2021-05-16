@@ -44,10 +44,7 @@ s3.listObjectsV2({ Bucket: TYSITE_AWS_CONTENT_BUCKET }, (error, data) => {
         return;
       }
       const fileContent = file.Body.toString();
-      fs.writeFileSync(
-        path.resolve(`content/notes/${Key}.md`),
-        JSON.parse(fileContent)
-      );
+      fs.writeFileSync(path.resolve(`content/${Key}.md`), fileContent);
     });
   });
 });
