@@ -35,8 +35,8 @@ exports.handler = async (event) => {
       });
 
       const s3 = new AWS.S3();
-      const title = exec(/title:.*\/(.*?)\n/, event.body)[1];
-      const slug = exec(/slug:.*\/(.*?)\n/, event.body)[1];
+      const title = /title:.*\/(.*?)\n/.exec(event.body)[1];
+      const slug = /slug:.*\/(.*?)\n/.exec(event.body)[1];
 
       s3.putObject(
         { Bucket: TYSITE_AWS_CONTENT_BUCKET, Key: slug, Body: event.body },
