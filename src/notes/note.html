@@ -1,46 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <title>Note</title>
-    <link rel="preload" as="style" href="../styles/main.css" />
-    <link href="../styles/main.css" rel="stylesheet" />
-    <link rel="preload" as="style" href="../styles/code.css" />
-    <link href="../styles/code.css" rel="stylesheet" />
-    <link rel="preload" as="style" href="note.css" />
-    <link href="note.css" rel="stylesheet" />
-    <link
-      rel="preload"
-      as="style"
-      href="../components/ty-header/ty-header.css"
-    />
-    <link href="../components/ty-header/ty-header.css" rel="stylesheet" />
-    <script defer src="../components/ty-header/ty-header.js"></script>
-  </head>
-  <body>
-    <ty-header></ty-header>
-    <main class="note">
-      <prpl type="inject" src="content/notes"></prpl>
-      <div class="note-end">
-        <h3 class="note-end-title">That's all folks!</h3>
-        <p class="note-end-text">
-          If you'd like to get in touch, reach out
-          <a
-            href="https://twitter.com/doestyhopp"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@doestyhopp</a
-          >.
-        </p>
-        <p class="note-end-text">
-          Otherwise if you're hungry for more, check out the
-          <a href="/notes">other published notes</a> 📚
-        </p>
-      </div>
-    </main>
-  </body>
-</html>
+<prpl type="page" src="content/notes">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>[title]</title>
+      <meta name="title" content="[title]" />
+      <meta name="description" content="[description]" />
+      <meta name="keywords" content="[categories]" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="[title]" />
+      <meta property="og:description" content="[description]" />
+      <meta property="og:url" content="https://tyhopp.com[slug]" />
+      <meta
+        property="og:image"
+        content="https://tyhopp.com/assets/meta/open-graph-card.png"
+      />
+      <meta property="og:image:width" content="2400" />
+      <meta property="og:image:height" content="1200" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@doestyhopp" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      />
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="180x180"
+        copy
+        href="../assets/meta/favicon-180.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        copy
+        href="../assets/meta/favicon-180.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="48x48"
+        copy
+        href="../assets/meta/favicon-48.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        copy
+        href="../assets/meta/favicon-32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        copy
+        href="../assets/meta/favicon-16.png"
+      />
+      <link rel="icon" href="../assets/meta/favicon.ico" />
+      <link rel="preload" as="style" href="../styles/main.css" />
+      <link href="../styles/main.css" rel="stylesheet" />
+      <link rel="preload" as="style" href="note.css" />
+      <link href="note.css" rel="stylesheet" />
+      <link rel="preload" as="style" href="../styles/code.css" />
+      <link href="../styles/code.css" rel="stylesheet" />
+      <link
+        rel="preload"
+        as="style"
+        href="../components/ty-header/ty-header.css"
+      />
+      <link href="../components/ty-header/ty-header.css" rel="stylesheet" />
+      <link rel="preload" as="style" href="../components/ty-tags/ty-tags.css" />
+      <link href="../components/ty-tags/ty-tags.css" rel="stylesheet" />
+      <script defer src="../components/ty-header/ty-header.js"></script>
+      <script defer src="../components/ty-tags/ty-tags.js"></script>
+    </head>
+    <body>
+      <ty-header></ty-header>
+      <main class="note">
+        <h1 class="note-title">[title]</h1>
+        <time class="note-date" datetime="[date]">[date]</time>
+        <ty-tags categories="[categories]"></ty-tags>
+        [body]
+        <div class="note-end">
+          <h3 class="note-end-title">That's all folks!</h3>
+          <p class="note-end-text">
+            If you'd like to get in touch, reach out
+            <a
+              href="https://twitter.com/doestyhopp"
+              target="_blank"
+              rel="noopener noreferrer"
+              >@doestyhopp</a
+            >.
+          </p>
+          <p class="note-end-text">
+            Otherwise if you're hungry for more, check out the
+            <a href="/notes">other published notes</a> 📚
+          </p>
+        </div>
+      </main>
+    </body>
+  </html>
+</prpl>

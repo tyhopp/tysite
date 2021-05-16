@@ -6,8 +6,6 @@ description: A solution to managing keys and revalidation for the SWR library.
 categories: JS, TS
 -->
 
-# SWR keys and revalidation
-
 Over the last half year I've worked with [SWR](https://swr.vercel.app), a "React Hooks library for data fetching" by the same group of people behind [Next.js](https://nextjs.org) and [Vercel](https://vercel.com). It's a neat library that I like specifically for it's link to an actual RFC, [RFC 5861](https://tools.ietf.org/html/rfc5861):
 
 > The stale-while-revalidate HTTP Cache-Control extension allows a cache to immediately return a stale response while it revalidates it in the background, thereby hiding latency (both in the network and on the server) from clients.

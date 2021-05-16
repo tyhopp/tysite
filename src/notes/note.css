@@ -11,10 +11,15 @@
   }
 }
 
-.note h1 {
+.note-title {
   font-size: 38px;
   line-height: 46px;
   margin: 0;
+}
+
+.note-date {
+  display: block;
+  margin: 0.5em 0;
 }
 
 .note-end {

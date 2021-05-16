@@ -10,6 +10,6 @@
   "author": "Ty Hopp",
   "license": "MIT",
   "dependencies": {
-    "prpl": "0.0.9"
+    "prpl": "0.0.10"
   }
 }
