@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "fetch-remote-content": "node scripts/fetch-remote-content.js",
-    "start": "prpl-build && prpl-serve",
+    "prestart": "prpl-build && node scripts/highlight-syntax.js",
+    "start": "prpl-serve",
     "prebuild": "node scripts/fetch-remote-content.js",
-    "build": "prpl-build"
+    "build": "prpl-build",
+    "postbuild": "node scripts/highlight-syntax.js"
   },
   "author": "Ty Hopp",
   "license": "MIT",
@@ -15,6 +17,7 @@
     "aws-sdk": "^2.907.0",
     "dotenv": "^9.0.2",
     "node-fetch": "^2.6.1",
+    "prismjs": "^1.23.0",
     "prpl": "0.0.12"
   }
 }
