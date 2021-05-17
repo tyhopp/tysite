@@ -11,10 +11,9 @@ const notes = fs.readdirSync(path.resolve('dist/notes'));
 const htmlFiles = notes
   .filter((note) => note.includes('html'))
   .map((note) => path.resolve(`dist/notes/${note}`));
+
 htmlFiles.forEach((file) => {
   let html = fs.readFileSync(file).toString();
-
-  console.log(html);
 
   const codeBlocks = [
     ...html.matchAll(/<code class="language-(.*?)">(.*?)<\/code>/gs),
