@@ -19,7 +19,7 @@ htmlFiles.forEach((file) => {
     ...html.matchAll(/<code class="language-(.*?)">(.*?)<\/code>/gs),
   ];
 
-  codeBlocks?.forEach(([block, language, code]) => {
+  codeBlocks.forEach(([block, language, code]) => {
     // Load language in prism if it is not already
     if (!loadedLanguages.includes(language)) {
       loadLanguages(language);
