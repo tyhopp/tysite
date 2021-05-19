@@ -3,7 +3,6 @@ code {
   --code-comment: slategray;
   --code-punctuation: #999;
   --code-property: #9d60ce;
-  --code-background: #f9fcff;
   --code-operator: #e299ff;
   --code-keyword: rgb(16, 163, 207);
   --code-function: #e94b6b;
@@ -16,7 +15,6 @@ code {
     --code-comment: slategray;
     --code-punctuation: #999;
     --code-property: #9d60ce;
-    --code-background: #00080f;
     --code-operator: #e299ff;
     --code-keyword: rgb(16, 163, 207);
     --code-function: #e94b6b;
@@ -27,7 +25,6 @@ code {
 pre[class*='language-'],
 code[class*='language-'] {
   color: var(--code-text);
-  background: var(--code-background);
   font-family: monospace;
   font-size: 14px;
   text-align: left;
