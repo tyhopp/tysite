@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Quincy';
+  font-display: swap;
   src: url('../assets/fonts/quincy-cf-extra-bold.woff2') format('woff2'),
     url('../assets/fonts/quincy-cf-extra-bold.woff') format('woff'),
     url('../assets/fonts/quincy-cf-extra-bold.otf') format('opentype');
