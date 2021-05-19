@@ -123,6 +123,29 @@ blockquote p {
   padding: 0 1em;
 }
 
+.button {
+  display: block;
+  letter-spacing: 0.75px;
+  line-height: 20px;
+  width: fit-content;
+  align-self: center;
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-tint);
+  cursor: pointer;
+  user-select: none;
+  margin: 0.3em;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button:hover {
+  filter: brightness(110%) saturate(110%);
+}
+
 [hidden] {
   display: none;
 }

@@ -58,6 +58,52 @@
   margin: 1.5em 0;
 }
 
-.index-cards .ty-card-button {
+.index-cards .index-card-button {
   color: #ffffff;
+}
+
+.index-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  margin: 1em 0;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  max-width: 440px;
+}
+
+.index-card-position {
+  margin: 0;
+}
+
+.index-card-title {
+  text-align: center;
+}
+
+.index-card-description {
+  margin-bottom: 0.25em;
+  width: 100%;
+}
+
+.index-card-description--singapore-exchange li {
+  list-style: url('../../assets/svg/list-item-blue.svg');
+}
+
+.index-card-description--flyright li {
+  list-style: url('../../assets/svg/list-item-purple.svg');
+}
+
+.index-card-description--edenspiekermann li {
+  list-style: url('../../assets/svg/list-item-red.svg');
+}
+
+.index-card-description--bytedance li {
+  list-style: url('../../assets/svg/list-item-blue.svg');
+}
+
+@media (prefers-color-scheme: dark) {
+  #edpenspiekermann-e {
+    filter: url(#invert);
+   }
 }
