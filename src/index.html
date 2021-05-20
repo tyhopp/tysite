@@ -6,7 +6,10 @@
     <title>Ty Hopp</title>
     <meta name="title" content="Ty Hopp" />
     <meta name="description" content="Beijing-based software engineer." />
-    <meta name="keywords" content="software engineer, full stack engineer, software developer" />
+    <meta
+      name="keywords"
+      content="software engineer, full stack engineer, software developer"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Ty Hopp" />
     <meta
@@ -57,102 +60,292 @@
     />
     <link rel="icon" href="assets/meta/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" />
-    <link href="styles/pages.css" rel="stylesheet" />
-    <link href="styles/components.css" rel="stylesheet" />
-    <script src="components/ty-header/ty-header.js"></script>
   </head>
   <body>
-    <ty-header></ty-header>
+    <nav>
+      <a
+        href="/"
+        title="Home"
+        data-nav="home"
+        role="img"
+        aria-label="Home emoji"
+        >🏡</a
+      >
+      <a
+        href="/notes"
+        title="Notes"
+        data-nav="notes"
+        role="img"
+        aria-label="Hand writing emoji"
+        >✍️</a
+      >
+    </nav>
     <main class="index">
-      <h1 class="index-title">Hi, I'm Ty <img class="index-title-emoji" src="assets/svg/emoji-wave-hand.svg" alt="Wave hand emoji"></img></h1>
-      <p class="index-description">I’m a software developer currently working at <a href="https://www.castingdepot.com" target="_blank" rel="noopener noreferrer">Casting Depot</a>.</p>
-      <p class="index-description">In my spare time I build experimental web frameworks like <a href="https://github.com/tyhopp/basework" target="_blank" rel="noopener noreferrer">Basework</a> and <a href="https://github.com/tyhopp/prpl" target="_blank" rel="noopener noreferrer">PRPL</a>, and occasionally write <a href="/notes">notes</a> about things like JavaScript.</p>
-      <p class="index-description">Here's where I've worked in the past <span class="index-description-emoji" role="img" aria-label="Finger pointing down emoji">👇</span></p>
+      <h1 class="index-title">
+        Hi, I'm Ty
+        <span
+          class="index-title-emoji"
+          role="img"
+          aria-label="Hand waving emoji"
+          >👋</span
+        >
+      </h1>
+      <p class="index-description">
+        I’m a software developer currently working at
+        <a
+          href="https://www.castingdepot.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Casting Depot</a
+        >.
+      </p>
+      <p class="index-description">
+        In my spare time I build experimental web frameworks like
+        <a
+          href="https://github.com/tyhopp/basework"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Basework</a
+        >
+        and
+        <a
+          href="https://github.com/tyhopp/prpl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >PRPL</a
+        >, and occasionally write <a href="/notes">notes</a> about things like
+        JavaScript.
+      </p>
+      <p class="index-description">
+        Here's where I've worked in the past
+        <span
+          class="index-description-emoji"
+          role="img"
+          aria-label="Finger pointing down emoji"
+          >👇</span
+        >
+      </p>
       <div class="index-cards">
         <div class="index-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" fill="none" aria-label="SGX logo">
-            <rect width="75" height="75" fill="white"/>
-            <path d="M75 0H0V15H75V0Z" fill="#BDD831"/>
-            <path d="M75 15H0V30H75V15Z" fill="#0B236B"/>
-            <path d="M75 30H0V45H75V30Z" fill="#BDD831"/>
-            <path d="M75 45H0V60H75V45Z" fill="#0B236B"/>
-            <path d="M75 60H0V75H75V60Z" fill="#BDD831"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            fill="none"
+            aria-label="SGX logo"
+          >
+            <rect width="75" height="75" fill="white" />
+            <path d="M75 0H0V15H75V0Z" fill="#BDD831" />
+            <path d="M75 15H0V30H75V15Z" fill="#0B236B" />
+            <path d="M75 30H0V45H75V30Z" fill="#BDD831" />
+            <path d="M75 45H0V60H75V45Z" fill="#0B236B" />
+            <path d="M75 60H0V75H75V60Z" fill="#BDD831" />
           </svg>
           <h2 class="index-card-title">Singapore Exchange</h2>
           <p class="index-card-position">Software Developer</p>
-          <div class="index-card-description index-card-description--singapore-exchange">
+          <div
+            class="index-card-description index-card-description--singapore-exchange"
+          >
             <ul>
-              <li>Developed features for key SGX Investors project (investors.sgx.com)</li>
-              <li>Built and maintained libraries leveraged across all SGX digital projects</li>
-              <li>Optimized application for maximum performance, speed and scalability</li>
+              <li>
+                Developed features for key SGX Investors project
+                (investors.sgx.com)
+              </li>
+              <li>
+                Built and maintained libraries leveraged across all SGX digital
+                projects
+              </li>
+              <li>
+                Optimized application for maximum performance, speed and
+                scalability
+              </li>
             </ul>
           </div>
-          <a class="index-card-button button" target="_blank" rel="noopener noreferrer" href="https://www.sgx.com" style="background-color: rgb(1, 47, 137);">See company</a>
+          <a
+            class="index-card-button button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.sgx.com"
+            style="background-color: rgb(1, 47, 137)"
+            >See company</a
+          >
         </div>
         <div class="index-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" aria-label="Flyright logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            aria-label="Flyright logo"
+          >
             <g fill="none" fill-rule="evenodd">
-              <path fill="#8449FF" fill-rule="nonzero" d="M37.5163591,74.8969064 C16.8211409,74.8969064 0.0440436242,58.1759197 0.0440436242,37.5496656 C0.0440436242,16.9234114 16.8211409,0.202424749 37.5163591,0.202424749 C58.2120805,0.202424749 74.9891779,16.9234114 74.9891779,37.5496656 C74.9891779,58.1759197 58.2120805,74.8969064 37.5163591,74.8969064 Z"/>
-              <path fill="#FFF" d="M30.4624 35L49.8393885 35C51.539321 35 52.9173885 33.6219325 52.9173885 31.922 52.9173885 30.804423 52.3116255 29.7746513 51.3348113 29.231685L31.6587382 18.2946578C30.4700823 17.6339385 28.9708674 18.0619156 28.310148 19.2505716 28.1067448 19.6165008 28 20.0282488 28 20.4469098L28 32.5376C28 33.897546 29.102454 35 30.4624 35zM28 42.4624L28 53.0836235C28 54.4435695 29.102454 55.5460235 30.4624 55.5460235 30.8318478 55.5460235 31.1965605 55.462891 31.529514 55.3027858L51.1833961 45.8519529C52.715408 45.1152645 53.360145 43.2761194 52.6234566 41.7441075 52.1107947 40.6779798 51.0324873 40 49.8495036 40L30.4624 40C29.102454 40 28 41.102454 28 42.4624z"/>
+              <path
+                fill="#8449FF"
+                fill-rule="nonzero"
+                d="M37.5163591,74.8969064 C16.8211409,74.8969064 0.0440436242,58.1759197 0.0440436242,37.5496656 C0.0440436242,16.9234114 16.8211409,0.202424749 37.5163591,0.202424749 C58.2120805,0.202424749 74.9891779,16.9234114 74.9891779,37.5496656 C74.9891779,58.1759197 58.2120805,74.8969064 37.5163591,74.8969064 Z"
+              />
+              <path
+                fill="#FFF"
+                d="M30.4624 35L49.8393885 35C51.539321 35 52.9173885 33.6219325 52.9173885 31.922 52.9173885 30.804423 52.3116255 29.7746513 51.3348113 29.231685L31.6587382 18.2946578C30.4700823 17.6339385 28.9708674 18.0619156 28.310148 19.2505716 28.1067448 19.6165008 28 20.0282488 28 20.4469098L28 32.5376C28 33.897546 29.102454 35 30.4624 35zM28 42.4624L28 53.0836235C28 54.4435695 29.102454 55.5460235 30.4624 55.5460235 30.8318478 55.5460235 31.1965605 55.462891 31.529514 55.3027858L51.1833961 45.8519529C52.715408 45.1152645 53.360145 43.2761194 52.6234566 41.7441075 52.1107947 40.6779798 51.0324873 40 49.8495036 40L30.4624 40C29.102454 40 28 41.102454 28 42.4624z"
+              />
             </g>
           </svg>
           <h2 class="index-card-title">Flyright</h2>
           <p class="index-card-position">Frontend Developer</p>
           <div class="index-card-description index-card-description--flyright">
             <ul>
-              <li>Engineered Android and iOS products using React Native, GraphQL &amp; AWS Amplify</li>
-              <li>Developed company website using React, Gatsby, Contentful and Netlify</li>
-              <li>Designed complete UI/UX and visual assets for all company products</li>
+              <li>
+                Engineered Android and iOS products using React Native, GraphQL
+                &amp; AWS Amplify
+              </li>
+              <li>
+                Developed company website using React, Gatsby, Contentful and
+                Netlify
+              </li>
+              <li>
+                Designed complete UI/UX and visual assets for all company
+                products
+              </li>
             </ul>
           </div>
-          <a class="index-card-button button" target="_blank" rel="noopener noreferrer" href="https://flyright.co" style="background-color: rgb(132, 73, 255);">See company</a>
+          <a
+            class="index-card-button button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://flyright.co"
+            style="background-color: rgb(132, 73, 255)"
+            >See company</a
+          >
         </div>
         <div class="index-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" aria-label="Edenspiekermann logo" color-interpolation-filters="sRGB">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            aria-label="Edenspiekermann logo"
+            color-interpolation-filters="sRGB"
+          >
             <filter id="invert">
               <feComponentTransfer>
                 <feFuncR type="table" tableValues="1 0"></feFuncR>
                 <feFuncG type="table" tableValues="1 0"></feFuncG>
                 <feFuncB type="table" tableValues="1 0"></feFuncB>
               </feComponentTransfer>
-           </filter>
+            </filter>
             <g fill="none" fill-rule="evenodd">
-              <path id="edpenspiekermann-e" fill="#000" d="M23.312,57.222 C7.238,57.222 -6.52811138e-14,49.796 -6.52811138e-14,31.748 C-6.52811138e-14,13.606 7.52,6.744 20.116,6.744 C34.592,6.744 40.232,14.64 40.232,32.312 L40.232,36.166 L14.382,36.166 C14.852,44.908 17.202,46.788 23.03,46.788 C27.636,46.788 30.644,44.908 33.558,42.652 L39.292,51.488 C35.814,54.778 30.174,57.222 23.312,57.222 Z M20.586,16.332 C16.356,16.332 14.758,18.494 14.382,27.142 L26.79,27.142 C26.602,19.434 25.662,16.332 20.586,16.332 Z"/>
+              <path
+                id="edpenspiekermann-e"
+                fill="#000"
+                d="M23.312,57.222 C7.238,57.222 -6.52811138e-14,49.796 -6.52811138e-14,31.748 C-6.52811138e-14,13.606 7.52,6.744 20.116,6.744 C34.592,6.744 40.232,14.64 40.232,32.312 L40.232,36.166 L14.382,36.166 C14.852,44.908 17.202,46.788 23.03,46.788 C27.636,46.788 30.644,44.908 33.558,42.652 L39.292,51.488 C35.814,54.778 30.174,57.222 23.312,57.222 Z M20.586,16.332 C16.356,16.332 14.758,18.494 14.382,27.142 L26.79,27.142 C26.602,19.434 25.662,16.332 20.586,16.332 Z"
+              />
               <rect width="34" height="10" x="41" y="58" fill="#E50050" />
             </g>
           </svg>
           <h2 class="index-card-title">Edenspiekermann</h2>
           <p class="index-card-position">Frontend Developer</p>
-          <div class="index-card-description index-card-description--edenspiekermann">
+          <div
+            class="index-card-description index-card-description--edenspiekermann"
+          >
             <ul>
-              <li>Lead developer on multilingual client website built with Gatsby, React, GraphQL, Styled Components, Contentful and Netlify</li>
-              <li>Implemented key brand animations with SVG, CSS and GSAP for client projects</li>
+              <li>
+                Lead developer on multilingual client website built with Gatsby,
+                React, GraphQL, Styled Components, Contentful and Netlify
+              </li>
+              <li>
+                Implemented key brand animations with SVG, CSS and GSAP for
+                client projects
+              </li>
             </ul>
           </div>
-          <a class="index-card-button button" target="_blank" rel="noopener noreferrer" href="https://www.edenspiekermann.com/" style="background-color: rgb(229, 1, 80);">See company</a>
+          <a
+            class="index-card-button button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.edenspiekermann.com/"
+            style="background-color: rgb(229, 1, 80)"
+            >See company</a
+          >
         </div>
         <div class="index-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" aria-label="Bytedance logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            aria-label="Bytedance logo"
+          >
             <g fill="none" fill-rule="evenodd" transform="translate(0 4)">
-              <polygon fill="#83CAC4" points="61.567 67 75 64.767 75 3.35 61.567 0"/>
-              <polygon fill="#34B1BE" points="53.809 56.95 53.809 22.333 40.316 25.683 40.316 52.483"/>
-              <polygon fill="#4D7CB9" points="19.03 32.383 19.03 64.767 34.038 60.3 34.038 34.617"/>
-              <polygon fill="#3357A3" points="0 62.533 0 4.467 12.313 7.817 12.313 59.183"/>
+              <polygon
+                fill="#83CAC4"
+                points="61.567 67 75 64.767 75 3.35 61.567 0"
+              />
+              <polygon
+                fill="#34B1BE"
+                points="53.809 56.95 53.809 22.333 40.316 25.683 40.316 52.483"
+              />
+              <polygon
+                fill="#4D7CB9"
+                points="19.03 32.383 19.03 64.767 34.038 60.3 34.038 34.617"
+              />
+              <polygon
+                fill="#3357A3"
+                points="0 62.533 0 4.467 12.313 7.817 12.313 59.183"
+              />
             </g>
           </svg>
           <h2 class="index-card-title">Bytedance</h2>
           <p class="index-card-position">Product Manager Intern</p>
           <div class="index-card-description index-card-description--bytedance">
             <ul>
-              <li>Prototyped new features rolled out to 100k+ daily active users</li>
-              <li>Redesigned complete UI/UX for product targeting international markets</li>
+              <li>
+                Prototyped new features rolled out to 100k+ daily active users
+              </li>
+              <li>
+                Redesigned complete UI/UX for product targeting international
+                markets
+              </li>
               <li>Consulted on cultural components for app localization</li>
             </ul>
           </div>
-          <a class="index-card-button button" target="_blank" rel="noopener noreferrer" href="https://bytedance.com/" style="background-color: rgb(15, 76, 208);">See company</a>
+          <a
+            class="index-card-button button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://bytedance.com/"
+            style="background-color: rgb(15, 76, 208)"
+            >See company</a
+          >
         </div>
       </div>
-      <p class="index-description index-end">You can also find me around the web on <a href="https://twitter.com/doestyhopp" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="https://github.com/tyhopp" target="_blank" rel="noopener noreferrer">GitHub</a>, and <a href="https://www.linkedin.com/in/tyhopp" target="_blank" rel="noopener noreferrer">LinkedIn</a>. Please do say hi!</p>
+      <p class="index-description index-end">
+        You can also find me around the web on
+        <a
+          href="https://twitter.com/doestyhopp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Twitter</a
+        >,
+        <a
+          href="https://github.com/tyhopp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >, and
+        <a
+          href="https://www.linkedin.com/in/tyhopp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >. Please do say hi!
+      </p>
     </main>
+    <script defer>
+      document.body.setAttribute('data-path', window.location.pathname);
+      window.addEventListener('popstate', () => {
+        document.body.setAttribute('data-path', window.location.pathname);
+      });
+    </script>
   </body>
 </html>

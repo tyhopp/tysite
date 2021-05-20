@@ -55,19 +55,16 @@
       />
       <link rel="icon" href="assets/meta/favicon.ico" />
       <link href="styles/main.css" rel="stylesheet" />
-      <link href="styles/pages.css" rel="stylesheet" />
-      <link href="styles/components.css" rel="stylesheet" />
-      <link href="styles/code.css" rel="stylesheet" />
-      <script src="components/ty-header/ty-header.js"></script>
-      <script src="components/ty-tags/ty-tags.js"></script>
-      <script src="components/ty-date/ty-date.js"></script>
     </head>
     <body>
-      <ty-header></ty-header>
+      <nav>
+        <a href="/" title="Home" data-nav="home">🏡</a>
+        <a href="/notes" title="Notes" data-nav="notes">✍️</a>
+      </nav>
       <main class="note">
         <h1 class="note-title">[title]</h1>
-        <ty-date class="note-date" datetime="[date]"></ty-date>
-        <ty-tags categories="[categories]"></ty-tags>
+        <time class="note-date" datetime="[raw-date]">[display-date]</time>
+        <div class="tags">[categories]</div>
         [body]
         <div class="note-end">
           <h3 class="note-end-title">That's all folks!</h3>
@@ -86,6 +83,12 @@
           </p>
         </div>
       </main>
+      <script defer>
+        document.body.setAttribute('data-path', window.location.pathname);
+        window.addEventListener('popstate', () => {
+          document.body.setAttribute('data-path', window.location.pathname);
+        });
+      </script>
     </body>
   </html>
 </prpl>

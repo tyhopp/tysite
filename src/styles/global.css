@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Quincy';
+  font-display: swap;
+  src: url('../assets/fonts/quincy-cf-extra-bold.woff2') format('woff2'),
+    url('../assets/fonts/quincy-cf-extra-bold.woff') format('woff'),
+    url('../assets/fonts/quincy-cf-extra-bold.otf') format('opentype');
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  --text: #000;
+  --primary-tint: #f0f5ff;
+  --secondary-tint: #e1ebff;
+  --line: #e3e3f1;
+  --background: #fff;
+  --highlight: lavender;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --text: #fff;
+    --primary-tint: #10144b;
+    --secondary-tint: #1e225c;
+    --line: #424464;
+    --background: #000;
+    --highlight: lightslategray;
+  }
+}
+
+::selection {
+  background-color: var(--highlight);
+}
+
+::-moz-selection {
+  background-color: var(--highlight);
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'system-ui', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: var(--text);
+  font-weight: normal;
+  margin: 0;
+  background-color: var(--background);
+}
+
+main[id='pages'] {
+  margin: 4em 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Quincy', 'system-ui', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 52px;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 0.1em;
+  border-bottom: 1px dotted mediumvioletred;
+}
+
+a:link,
+a:visited {
+  color: var(--text);
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  padding: 0.25em 0;
+  margin: auto;
+}
+
+blockquote {
+  border-left: 2px solid var(--line);
+  margin: 1em;
+}
+
+blockquote p {
+  padding: 0 1em;
+}
+
+.button {
+  display: block;
+  letter-spacing: 0.75px;
+  line-height: 20px;
+  width: fit-content;
+  align-self: center;
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-tint);
+  cursor: pointer;
+  user-select: none;
+  margin: 0.3em;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button:hover {
+  filter: brightness(110%) saturate(110%);
+}
+
+.tags {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  display: block;
+  font-size: 13px;
+  width: fit-content;
+  padding: 0 1em;
+  margin-right: 1em;
+  border: 1px dashed var(--line);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  width: 100%;
+  background-color: var(--background);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 990px) {
+  nav {
+    height: 50px;
+  }
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+  height: 54px;
+  border-left: 1px solid var(--line);
+  cursor: pointer;
+  background-color: var(--background);
+  border-bottom: none;
+}
+
+nav a[data-nav='home'] {
+  font-size: 32px;
+}
+
+nav a[data-nav='notes'] {
+  font-size: 30px;
+}
+
+body[data-path='/'] nav a[data-nav='home'] {
+  background-color: var(--primary-tint);
+}
+
+body[data-path*='/notes'] nav a[data-nav='notes'] {
+  background-color: var(--primary-tint);
+}
+
+@media (min-width: 990px) {
+  nav a {
+    height: 50px;
+  }
+}
+
+nav a:last-of-type {
+  border-right: 1px solid var(--line);
+}
+
+nav a:hover {
+  background-color: var(--primary-tint);
+  border: 1px solid cornflowerblue;
+}
+
+nav a:active {
+  background-color: var(--secondary-tint);
+  border: 1px solid deepskyblue;
+}
