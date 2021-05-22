@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "fetch-remote-content": "node scripts/fetch-remote-content.js",
-    "prestart": "prpl-build && node scripts/highlight-syntax.js",
+    "prestart": "prpl-build && node scripts/resolve-css-imports && node scripts/highlight-syntax.js",
     "start": "prpl-serve",
     "prebuild": "node scripts/fetch-remote-content.js",
     "build": "prpl-build",
-    "postbuild": "node scripts/highlight-syntax.js"
+    "postbuild": "node scripts/resolve-css-imports && node scripts/highlight-syntax.js"
   },
   "author": "Ty Hopp",
   "license": "MIT",
