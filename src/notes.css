@@ -5,24 +5,18 @@
   max-width: 500px;
 }
 
-@media (max-width: 350px) {
-  .notes {
-    padding: 0 0.5em;
-  }
-}
-
 .notes-title {
   text-align: center;
   margin: 0;
 }
 
 .notes-list {
-  padding-left: 2.5em;
+  padding-left: 3em;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .notes-list {
-    padding-left: 0.5em;
+    padding-left: 0;
   }
 }
 
