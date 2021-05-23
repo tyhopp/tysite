@@ -1,7 +1,7 @@
 {
-  "name": "tysite-prpl",
-  "version": "0.0.1",
-  "description": "Rewrite of https://tyhopp.com using the PRPL static site generator",
+  "name": "tysite",
+  "version": "1.0.0",
+  "description": "The personal website of Ty Hopp, built with PRPL.",
   "main": "index.js",
   "scripts": {
     "fetch": "node scripts/fetch-remote-content.js",
@@ -13,6 +13,9 @@
   },
   "author": "Ty Hopp",
   "license": "MIT",
+  "keywords": [
+    "prpl"
+  ],
   "dependencies": {
     "aws-sdk": "^2.907.0",
     "dotenv": "^9.0.2",
