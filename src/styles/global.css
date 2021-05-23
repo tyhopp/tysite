@@ -242,7 +242,13 @@ footer {
   border-top: 1px solid var(--line);
   font-size: small;
   text-align: center;
-  padding: 0.5em 0.5em 0.75em;
+  padding: 1em 1em 1.75em;
+}
+
+@media (min-width: 990px) {
+  footer {
+    padding: 0.5em 0.5em 1em;
+  }
 }
 
 footer > p {
