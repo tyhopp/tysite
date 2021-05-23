@@ -341,10 +341,32 @@
         >. Please do say hi!
       </p>
     </main>
+    <footer>
+      <p data-stats="render"></p>
+      <p>
+        💜 Built with
+        <a
+          href="https://github.com/tyhopp/prpl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >PRPL</a
+        >
+      </p>
+    </footer>
     <script defer>
       document.body.setAttribute('data-path', window.location.pathname);
       window.addEventListener('popstate', () => {
         document.body.setAttribute('data-path', window.location.pathname);
+      });
+      window.addEventListener('load', () => {
+        if (window.performance && window.performance.timing) {
+          document.querySelector(
+            '[data-stats="render"]'
+          ).innerHTML = `⏱ Rendered in ${
+            window.performance.timing.domComplete -
+            window.performance.timing.domLoading
+          } milliseconds`;
+        }
       });
     </script>
   </body>
