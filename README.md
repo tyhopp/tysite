@@ -15,6 +15,7 @@ The personal site of Ty Hopp. See it deployed [here](https://tyhopp.com).
 ## Scripts
 
 - [fetch-remote-content](./scripts/fetch-remote-content.js), a script that pulls down notes from S3 into the file system
+- [generate-rss](./scripts/generate-rss.js), a script that generates an Atom RSS feed at build time
 - [highlight-syntax](./scripts/highlight-syntax.js), a script uses [Prism](https://prismjs.com/) to highlight code block syntax at build time
 - [resolve-css-imports](./scripts/resolve-css-imports.js), a script that resolves all CSS `@import` statements at build time
 
