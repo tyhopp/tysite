@@ -63,6 +63,12 @@
     />
     <link rel="icon" href="assets/meta/favicon.ico" />
     <link href="styles/main.css" rel="stylesheet" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Ty Hopp"
+      href="/rss/atom.xml"
+    />
   </head>
   <body>
     <nav>
@@ -99,7 +105,12 @@
         >PRPL</a
       >
     </p>
-    <p>🔖 <a href="https://tyhopp.com/rss/atom.xml">RSS</a></p>
+    <p>
+      🔖
+      <a href="/rss/atom.xml" type="application/atom+xml" rel="alternate"
+        >RSS</a
+      >
+    </p>
   </footer>
   <script defer>
     document.body.setAttribute('data-path', window.location.pathname);
