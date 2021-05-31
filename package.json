@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "The personal website of Ty Hopp, built with PRPL.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyhopp/tysite.git"
+  },
   "scripts": {
     "fetch": "node scripts/fetch-remote-content.js",
     "prestart": "prpl-build && node scripts/highlight-syntax.js && node scripts/generate-rss.js",
