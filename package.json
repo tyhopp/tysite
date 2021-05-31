@@ -9,7 +9,7 @@
     "start": "prpl-serve",
     "prebuild": "node scripts/fetch-remote-content.js",
     "build": "prpl-build",
-    "postbuild": "node scripts/resolve-css-imports && node scripts/highlight-syntax.js"
+    "postbuild": "node scripts/resolve-css-imports && node scripts/highlight-syntax.js && node scripts/generate-rss.js"
   },
   "author": "Ty Hopp",
   "license": "MIT",
@@ -21,6 +21,6 @@
     "dotenv": "^9.0.2",
     "node-fetch": "^2.6.1",
     "prismjs": "^1.23.0",
-    "prpl": "0.0.19"
+    "prpl": "0.0.20"
   }
 }
