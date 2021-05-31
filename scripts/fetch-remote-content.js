@@ -48,3 +48,5 @@ s3.listObjectsV2({ Bucket: TYSITE_AWS_CONTENT_BUCKET }, (error, data) => {
     });
   });
 });
+
+console.log('\x1b[35m', '[Tysite] Fetched remote content', '\x1b[0m');

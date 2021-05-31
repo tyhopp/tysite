@@ -83,3 +83,5 @@ const atomFeed = `
 ensure('dist/rss');
 
 fs.writeFileSync(path.resolve('dist/rss/atom.xml'), atomFeed);
+
+console.log('\x1b[35m', '[Tysite] Generated RSS feed', '\x1b[0m');

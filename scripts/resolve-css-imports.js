@@ -23,3 +23,5 @@ function resolveImports(main) {
 const resolvedMain = resolveImports(main);
 
 fs.writeFileSync(path.resolve(entry), resolvedMain);
+
+console.log('\x1b[35m', '[Tysite] Resolved CSS imports', '\x1b[0m');

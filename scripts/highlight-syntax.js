@@ -42,3 +42,5 @@ htmlFiles.forEach((file) => {
 
   fs.writeFileSync(file, html);
 });
+
+console.log('\x1b[35m', '[Tysite] Highlighted code syntax', '\x1b[0m');
