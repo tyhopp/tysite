@@ -7,6 +7,7 @@ code {
   --code-keyword: rgb(16, 163, 207);
   --code-function: #e94b6b;
   --code-variable: #e90;
+  --code-single-line: rgb(16, 163, 207);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,11 +20,12 @@ code {
     --code-keyword: rgb(16, 163, 207);
     --code-function: #e94b6b;
     --code-variable: #e90;
+    --code-single-line: rgb(16, 163, 207);
   }
 }
 
-pre[class*='language-'],
-code[class*='language-'] {
+pre,
+code {
   color: var(--code-text);
   font-family: monospace;
   font-size: 14px;
@@ -44,29 +46,28 @@ code[class*='language-'] {
   hyphens: none;
 }
 
-code[class*='language-']::-moz-selection {
+code::-moz-selection {
   text-shadow: none;
 }
 
-code[class*='language-']::selection {
+code::selection {
   text-shadow: none;
 }
 
 @media print {
-  code[class*='language-'] {
+  code {
     text-shadow: none;
   }
 }
 
-pre[class*='language-'] {
+pre {
   padding: 1em 0;
   margin: 0.5em 0;
   overflow: auto;
 }
 
-:not(pre) > code[class*='language-'] {
-  padding: 0.3em 0.5em;
-  border-radius: 0.5em;
+:not(pre) > code {
+  color: var(--code-single-line);
   white-space: normal;
 }
 
