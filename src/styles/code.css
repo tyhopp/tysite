@@ -1,3 +1,4 @@
+pre,
 code {
   --code-text: var(--text);
   --code-comment: slategray;
@@ -8,9 +9,11 @@ code {
   --code-function: #e94b6b;
   --code-variable: #e90;
   --code-single-line: rgb(16, 163, 207);
+  --code-background: rgb(248, 248, 250);
 }
 
 @media (prefers-color-scheme: dark) {
+  pre,
   code {
     --code-text: var(--text);
     --code-comment: slategray;
@@ -21,12 +24,14 @@ code {
     --code-function: #e94b6b;
     --code-variable: #e90;
     --code-single-line: rgb(16, 163, 207);
+    --code-background: rgb(12, 12, 26);
   }
 }
 
 pre,
 code {
   color: var(--code-text);
+  background-color: var(--code-background);
   font-family: monospace;
   font-size: 14px;
   text-align: left;
@@ -35,6 +40,7 @@ code {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
+  border-radius: 0.3em;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -61,7 +67,7 @@ code::selection {
 }
 
 pre {
-  padding: 1em 0;
+  padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
 }
@@ -69,6 +75,7 @@ pre {
 :not(pre) > code {
   color: var(--code-single-line);
   white-space: normal;
+  padding: 0.25em;
 }
 
 .token.comment,
