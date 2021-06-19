@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <base href="/" />
+    <link rel="import" href="fragments/meta.html" />
     <title>Notes</title>
     <meta name="title" content="Notes" />
     <meta
@@ -13,55 +12,14 @@
       name="keywords"
       content="software engineer, full stack engineer, software developer"
     />
-    <meta property="og:type" content="website" />
     <meta property="og:title" content="Notes | Ty Hopp" />
     <meta
       property="og:description"
       content="Notes by Ty Hopp, Beijing-based software engineer."
     />
     <meta property="og:url" content="https://tyhopp.com/notes" />
-    <meta
-      property="og:image"
-      content="https://tyhopp.com/assets/meta/open-graph-card.png"
-    />
-    <meta property="og:image:width" content="2400" />
-    <meta property="og:image:height" content="1200" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@doestyhopp" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="180x180"
-      href="assets/meta/favicon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/meta/favicon-180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="assets/meta/favicon-48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/meta/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/meta/favicon-16.png"
-    />
-    <link rel="icon" href="assets/meta/favicon.ico" />
+    <link rel="import" href="fragments/open-graph.html" />
+    <link rel="import" href="fragments/favicon.html" />
     <link href="styles/main.css" rel="stylesheet" />
     <link
       rel="alternate"
@@ -71,10 +29,7 @@
     />
   </head>
   <body>
-    <nav>
-      <a href="/" title="Home" data-nav="home">🏡</a>
-      <a href="/notes" title="Notes" data-nav="notes">✍️</a>
-    </nav>
+    <link rel="import" href="fragments/nav.html" />
     <main class="notes">
       <h1 class="notes-title">Notes</h1>
       <ul class="notes-list">
@@ -94,47 +49,6 @@
       </ul>
     </main>
   </body>
-  <footer>
-    <p>⏱ Rendered in <span data-stats="render">?</span> milliseconds</p>
-    <p>
-      💜 Built with
-      <a
-        href="https://github.com/tyhopp/prpl"
-        target="_blank"
-        rel="noopener noreferrer"
-        >PRPL</a
-      >
-    </p>
-    <p>🚫 No cookies</p>
-    <p>
-      🔖
-      <a href="/rss/atom.xml" type="application/atom+xml" rel="alternate"
-        >RSS</a
-      >
-    </p>
-  </footer>
-  <script defer>
-    document.body.setAttribute('data-path', window.location.pathname);
-    window.addEventListener('popstate', () => {
-      document.body.setAttribute('data-path', window.location.pathname);
-    });
-    window.addEventListener('load', () => {
-      document.querySelector('[data-stats="render"]').textContent = Math.round(
-        performance.timing.domComplete - performance.timing.domLoading
-      );
-    });
-    const performanceObserver = new PerformanceObserver((entries) => {
-      const renderStart = entries.getEntriesByName('prpl-render-start');
-      const renderEnd = entries.getEntriesByName('prpl-render-end');
-      if (renderStart.length && renderEnd.length) {
-        document.querySelector(
-          '[data-stats="render"]'
-        ).textContent = Math.round(
-          renderEnd[0].startTime - renderStart[0].startTime
-        );
-        performance.clearMarks();
-      }
-    });
-    performanceObserver.observe({ entryTypes: ['mark'] });
-  </script>
+  <link rel="import" href="fragments/footer.html" />
+  <link rel="import" href="fragments/performance-marks.html" />
 </html>

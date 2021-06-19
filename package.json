@@ -9,11 +9,11 @@
   },
   "scripts": {
     "fetch": "node scripts/fetch-remote-content.js",
-    "prestart": "prpl-build && node scripts/highlight-syntax.js && node scripts/generate-rss.js",
+    "prestart": "prpl-build && node scripts/post-build.js",
     "start": "prpl-serve",
     "prebuild": "node scripts/fetch-remote-content.js",
     "build": "prpl-build",
-    "postbuild": "node scripts/resolve-css-imports && node scripts/highlight-syntax.js && node scripts/generate-rss.js"
+    "postbuild": "node scripts/post-build.js"
   },
   "author": "Ty Hopp",
   "license": "MIT",
