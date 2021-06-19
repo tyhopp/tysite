@@ -12,12 +12,17 @@ The personal site of Ty Hopp. See it deployed [here](https://tyhopp.com).
 
 - [upload-to-s3](./functions/upload-to-s3/upload-to-s3.js), a lambda function that lets me write in [Bear](https://bear.app) and upload notes to S3
 
-## Scripts
+## Pre-build scripts
 
-- [fetch-remote-content](./scripts/fetch-remote-content.js), a script that pulls down notes from S3 into the file system
-- [generate-rss](./scripts/generate-rss.js), a script that generates an Atom RSS feed at build time
-- [highlight-syntax](./scripts/highlight-syntax.js), a script uses [Prism](https://prismjs.com/) to highlight code block syntax at build time
-- [resolve-css-imports](./scripts/resolve-css-imports.js), a script that resolves all CSS `@import` statements at build time
+- [fetch-remote-content](./scripts/fetch-remote-content.js) pulls down notes from S3 into the file system prior to the build step
+
+## Post-build scripts
+
+- [post-build](./scripts/post-build.js) runs the following build scripts in a child process to keep the [package.json](./package.json) script commands clean:
+  - [resolve-css-imports](./scripts/resolve-css-imports.js) resolves all CSS `@import` statements
+  - [resolve-html-imports](./scripts/resolve-html-imports.js) resolves all HTML `<link rel="import" href="..." />` statements
+  - [highlight-syntax](./scripts/highlight-syntax.js) uses [Prism](https://prismjs.com/) to highlight code block syntax
+  - [generate-rss](./scripts/generate-rss.js) generates an Atom RSS feed
 
 ## Tools
 
