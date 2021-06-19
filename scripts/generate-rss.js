@@ -68,8 +68,7 @@ contentFiles.forEach((file) => {
 const now = new Date();
 const updated = now.toISOString();
 
-const atomFeed = `
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+const atomFeed = `<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Ty Hopp</title>
   <icon>https://tyhopp.com/assets/meta/favicon-32.png</icon>
   <link type="text/html" href="https://tyhopp.com/" rel="alternate"/>
@@ -79,8 +78,7 @@ const atomFeed = `
   </author>
   <id>https://tyhopp.com/rss/atom.xml</id>
   ${entries}
-</feed>
-`;
+</feed>`;
 
 ensure('dist/rss');
 

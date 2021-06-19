@@ -8,6 +8,7 @@ const postBuildScripts = [
   'scripts/resolve-html-imports.js',
   'scripts/highlight-syntax.js',
   'scripts/generate-rss.js',
+  'scripts/generate-sitemap.js',
 ];
 
 for (let i = 0; i < postBuildScripts.length; i++) {
