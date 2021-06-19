@@ -23,6 +23,7 @@ The personal site of Ty Hopp. See it deployed [here](https://tyhopp.com).
   - [resolve-html-imports](./scripts/resolve-html-imports.js) resolves all HTML `<link rel="import" href="..." />` statements
   - [highlight-syntax](./scripts/highlight-syntax.js) uses [Prism](https://prismjs.com/) to highlight code block syntax
   - [generate-rss](./scripts/generate-rss.js) generates an Atom RSS feed
+  - [generate-sitemap](./scripts/generate-sitemap.js) generates a sitemap
 
 ## Tools
 
